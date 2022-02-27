@@ -1,14 +1,13 @@
-import react from 'react';
+import React, { Component } from 'react';
 
-function Home() {
-    return (
-        <>
-            <header><h2>Web - Game - Demo</h2></header>
-            <div>
-                <button><a>Test 1 START</a></button>
-            </div>
-        </>
-    );
+export default class Home extends Component {
+    static displayName = Home.name;
+
+    render() {
+        return (
+            <>
+                <header><h2>Web - Game - Demo</h2></header>
+            </>    
+        )
+    }
 }
-
-export default Home;

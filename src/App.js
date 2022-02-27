@@ -1,13 +1,22 @@
-import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css'
+import React, { Component } from 'react';
+import { Routes } from 'react-router';
+import { Route } from 'react-router-dom';
+import { Layout } from './components/Layout';
 import Home from './pages/Home';
 
-function App() {
-  return (
-    <div className="App">
-      <Home></Home>
-    </div>
-  );
-}
+import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css'
 
-export default App;
+export default class App extends Component {
+  static displayName = App.name;
+
+  render() {
+    return (
+      <Layout>
+        <Routes>
+          <Route exact path='/' element={<Home />} />
+        </Routes>
+      </Layout>
+    );
+  }
+}
