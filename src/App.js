@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
-import { Routes } from 'react-router';
-import { Route } from 'react-router-dom';
-import { Layout } from './components/Layout';
-import Home from './pages/Home';
+import { Routes, Route } from 'react-router-dom';
 
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css'
+
+import Home from './pages/Home';
+import Game01 from './pages/Game01';
+import { Layout } from './components/Layout';
 
 export default class App extends Component {
   static displayName = App.name;
@@ -14,7 +15,8 @@ export default class App extends Component {
     return (
       <Layout>
         <Routes>
-          <Route exact path='/' element={<Home />} />
+          <Route path="/" element={<Home/>} />
+          <Route path="/game01" element={<Game01/>} />
         </Routes>
       </Layout>
     );
